@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -5,6 +6,15 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class StudentTest {
+
+    Student student;
+
+    // Runs before every test.
+    @Before
+    public void setUp() {
+        student = new Student(1L, "fer");
+    }
+
     @Test
     public void testCreateStudent(){
         Student fer = new Student(1L, "fer");
@@ -20,7 +30,6 @@ public class StudentTest {
         assertSame("fer", fer.getName());
         assertSame(0, fer.getGrades().size());
     }
-
 
     @Test
     public void testAddGrade(){
