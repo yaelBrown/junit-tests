@@ -1,15 +1,14 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class CohortTest {
-
+public class JFiveCohortTest {
 
     // Have to define variables for the @before method
-
-    @BeforeAll
+    @BeforeEach
     public void setUp() {
         Cohort cohort = new Cohort();
     }
@@ -17,7 +16,7 @@ public class CohortTest {
     @Test
     public void testCohortNotNull() {
         Cohort cohort = new Cohort();
-        assertNotNull(cohort);
+        Assertions.assertNotNull(cohort);
     }
 
     @Test
